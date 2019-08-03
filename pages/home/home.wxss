@@ -1,0 +1,46 @@
+/* pages/home/home.wxss */
+/* home样式 */
+view{
+  box-sizing: border-box;
+}
+.banner{
+  padding: 5rpx;
+  margin-bottom: 15rpx;
+  border: 1rpx solid #dd5e9e15;
+}
+.bannerImg{
+  width: 100%;
+}
+.new{
+  font-weight: 700;
+  padding-left: 15rpx;
+  color: #dd5e9e;
+}
+.hots{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+.hots>view{
+  width: 33%;
+  padding: 5rpx;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  border: 1rpx solid #dd5e9e15;
+  border-radius: 5rpx;
+}
+.hots>view>image{
+  width: 240rpx;
+  height: 320rpx;
+}
+.hots>view>.title{
+  color: #dd5e9e;
+  font-family: "SimHei";
+  font-size: 32rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

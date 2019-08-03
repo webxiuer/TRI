@@ -1,0 +1,40 @@
+<!--pages/list/list.wxml-->
+<!-- 主页 -->
+<view class='myl'>电影一览</view>
+<!-- view = 一部电影 -->
+<view class='movie' wx:for="{{list}}" wx:key="index">
+  <!-- 左侧 海报列表 -->
+  <image 
+  class='movie-img' 
+  src='{{item.images.small}}'
+  ></image>
+  <!-- 右侧 电影介绍 -->
+  <view class='movie-info'>
+    <!-- 右侧 标题 -->
+    <view class='movie-title'>{{item.title}}</view>
+    <!-- 右侧 评分 -->
+    <view wx:if="{{item.rating.average!=0}}">
+      观众评分:
+      <text class='movie-score'>{{item.rating.average}}</text>
+    </view>
+    <view wx:if="{{item.rating.average==0}}">
+      <text class='movie-noscore'>暂无评分</text>
+    </view>
+    <!-- 右侧 主演 -->
+    <view>
+      主演:
+      <text wx:for="{{item.casts}}" wx:key="index">{{item.name}} </text>
+    </view>
+    <!-- 右侧 年份 -->
+    <view>年份: {{item.year}}</view>
+    <!-- 右侧 按钮 -->
+    <button 
+    class='movie-comment' 
+    bindtap='jumpComment' data-id="{{item.id}}">详情</button>
+  </view>
+</view>
+<!-- toast -->
+<van-toast id="van-toast" />
+
+
+

@@ -1,0 +1,28 @@
+<!--pages/home/home.wxml-->
+<!-- 主页 home -->
+<!-- 轮播图 -->
+<swiper indicator-dots autoplay class="banner">
+  <swiper-item>
+    <image src='../../images/s0.jpg' mode='aspectFill' class='bannerImg' lazy-load='true'></image>
+  </swiper-item>
+  <swiper-item>
+    <image src='../../images/s1.jpg' mode='aspectFill' class='bannerImg' lazy-load='true'></image>
+  </swiper-item>
+  <swiper-item>
+    <image src='../../images/s2.jpg' mode='aspectFill' class='bannerImg' lazy-load='true'></image>
+  </swiper-item>
+  <swiper-item>
+    <image src='../../images/s3.jpg' mode='aspectFill' class='bannerImg' lazy-load='true'></image>
+  </swiper-item>
+</swiper>
+<view class="new">热门电影</view>
+<!-- 电影格子 -->
+<view class='hots'>
+  <view wx:for="{{list}}" wx:key="index">
+    <image src="{{item.images.large}}" mode='center' catchtap='jumpComment' data-id="{{item.id}}" lazy-load='true'></image>
+    <view class="title">{{item.title}}</view>
+  </view>
+</view>
+<!-- toast -->
+<van-toast id="van-toast" />
+

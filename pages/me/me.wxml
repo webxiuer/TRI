@@ -1,0 +1,17 @@
+<!--pages/me.wxml-->
+<!-- <text>pages/me.wxml</text> -->
+<!-- 个人中心 -->
+<view class='me'>个人中心</view>
+<view class='me-info'>
+  <image class='me-pic'
+    wx:if="{{list.length-1==index}}"
+    wx:for="{{list}}" 
+    wx:key="index" 
+    src="{{item.img_url}}" 
+    mode='aspectFit'
+  >
+  </image>
+</view>
+<!-- 添加按钮上传图片 -->
+<van-button type='default' size="large" bindtap='myupload'>上传头像</van-button>
+

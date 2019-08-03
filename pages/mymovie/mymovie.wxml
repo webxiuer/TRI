@@ -1,0 +1,37 @@
+<!--pages/mymovie/mymovie.wxml-->
+<!-- mymovie -->
+<view class='myc'>评论过的电影</view>
+<!-- movie comment -->
+<view class='mymovie'>
+  <view wx:for="{{list}}" wx:key="index">
+    <!-- 评论过的电影 -->
+    <view class='movie'>
+      <!-- 左侧电影图片 -->
+      <image 
+       src='{{movies[index].images.small}}' 
+       mode='aspectFill' 
+       class='mypic'></image>
+      <view class='detail'>
+        <!-- 标题 -->
+        <view class='myt'>{{movies[index].title}}</view>
+        <!-- 评分 -->
+        <view class='myr'>{{movies[index].rating.average}}</view>
+        <!-- 国家 -->
+        <view>{{movies[index].countries[0]}}</view>
+        <!-- 导演 -->
+        <view>导演: {{movies[index].directors[0].name}}</view>
+      </view>
+      <!-- 评论相关的信息 -->
+      <view class='comment'> 
+        <view class='ct'>评论:{{item.content}}</view>
+        <view class='cv'>
+          <image class='cpic' mode="aspectFill" 
+            wx:for="{{item.fileIDs}}" 
+            wx:key="index" 
+            wx:if="{{index<2}}" 
+            src="{{item}}"></image>
+        </view>
+      </view>
+    </view>
+</view>
+</view>

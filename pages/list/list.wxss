@@ -1,0 +1,64 @@
+/* pages/list/list.wxss */
+/* 标题 */
+.myl{
+  color: #dd5e9e;
+  padding: 15rpx;
+  text-align: center;
+  font-weight: 700;
+}
+/* 电影的区域 */
+.movie{
+  display: flex; /*弹性布局*/
+  padding: 10rpx;
+  border-bottom: 1rpx solid #ccc;
+  margin-right: 10rpx;
+}
+/* 左 */
+.movie-img{
+  width: 200rpx;
+  height: 300rpx;
+  margin-top: 10rpx;
+  margin-right: 20rpx;
+}
+/* 右 */
+.movie-info{
+  flex:1; /*让所有弹性盒模型对象的子元素都有相同的长度，且忽略它们内部的内容 	0 1 auto*/
+  font-size: 28rpx;
+  line-height: 1.8;
+  overflow: hidden;
+}
+.movie-title{
+  color: #666;
+  font-size: 40rpx;
+  font-weight: 700;
+  /* 溢出变... */
+  text-overflow: ellipsis;
+  white-space: nowrap; 
+  /* overflow: hidden; */
+}
+.movie-score{
+  color: #faaf00;
+}
+.movie-noscore{
+  color: #567;
+}
+.movie-comment{
+  height: 60rpx;
+  background: #dd5e9e;
+  color: #fff;
+  font-size: 26rpx;
+  margin-top: 40rpx;
+}
+/* ----------------- */
+.movie-info>view:nth-child(3){
+  overflow: hidden;
+  white-space: nowrap; 
+}
+.movie-info>view:nth-child(3)>text{
+  /* 溢出变... */
+  text-overflow: ellipsis;
+  /* white-space: nowrap;  */
+  /* overflow: hidden; */
+}
+
+

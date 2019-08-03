@@ -1,0 +1,48 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/list/list",
+    "pages/me/me",
+    "pages/mymovie/mymovie",
+    "pages/comment/comment"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "TRI电影",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#233",
+    "selectedColor": "#dd5e9e",
+    "backgroundColor": "#fffafc",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "首页",
+        "iconPath": "images/home0.png",
+        "selectedIconPath": "images/home1.png"
+      },
+      {
+        "pagePath": "pages/list/list",
+        "text": "电影列表",
+        "iconPath": "images/list0.png",
+        "selectedIconPath": "images/list1.png"
+      },
+      {
+        "pagePath": "pages/mymovie/mymovie",
+        "text": "我的电影",
+        "iconPath": "images/movie0.png",
+        "selectedIconPath": "images/movie1.png"
+      },
+      {
+        "pagePath": "pages/me/me",
+        "text": "个人",
+        "iconPath": "images/me0.png",
+        "selectedIconPath": "images/me1.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}
